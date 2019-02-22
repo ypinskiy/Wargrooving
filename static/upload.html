@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Wargrooving - Upload Map</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="Description" content="A custom map sharing site for the game Wargroove">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="stylesheet" href="semantic/dist/semantic.min.css">
+	<link rel="stylesheet" href="upload.css">
+</head>
+
+<body>
+	<div class="titlebar">
+		<a href="/">Wargrooving</a>
+		<a href="/">
+			<img src="assets/map_bg.png">
+		</a>
+	</div>
+	<div class="msg-box">
+		<form id="upload-form" class="ui form">
+			<div class="field">
+				<label>Map Title</label>
+				<input type="text" name="title" placeholder="Title goes here...">
+			</div>
+			<div class="field">
+				<label>Map Description</label>
+				<textarea name="description" rows="2" placeholder="Make sure its descriptive!"></textarea>
+			</div>
+			<div class="field">
+				<label>Map Code</label>
+				<input id="map-code" type="text" style="text-transform:uppercase" name="code" placeholder="Code goes here...">
+			</div>
+			<div class="field">
+				<label>Map Screenshot</label>
+				<input type="file" id="screenshot" name="screenshot" accept="image/png, image/jpeg, image/gif">
+			</div>
+			<div class="field">
+				<label>Map Creator</label>
+				<input type="text" name="creator" placeholder="Your username goes here..." value="Anonymous">
+			</div>
+			<div class="field">
+				<label>Map Tags</label>
+				<select id="tag-options" multiple class="ui fluid search multiple dropdown" multiple="" name="tags">
+					<option value="" disabled selected>Select your tags</option>
+				</select>
+			</div>
+			<div class="ui success message">
+				<div class="header">Map Uploaded!</div>
+				<p id="success-body">Your map is now uploaded and available <a id="success-link">right here.</a></p>
+			</div>
+			<div class="ui error message">
+				<div class="header">Upload Error!</div>
+				<p id="error-body"></p>
+			</div>
+			<button type="button" id="submit-btn" class="green ui button">Submit</button>
+			<button type="button" id="reset-btn" class="red ui button">Reset</button>
+		</form>
+	</div>
+	<script src="utils/jquery-3.2.1.min.js"></script>
+	<script src="semantic/dist/semantic.min.js"></script>
+	<script src="upload.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Wargrooving</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="Description" content="A custom map sharing site for the game Wargroove">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="stylesheet" href="semantic/dist/semantic.min.css">
+	<link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+	<div class="titlebar">
+		<h1>Wargrooving</h1>
+		<img src="assets/map_bg.png">
+	</div>
+	<div class="site-desc msg-box">
+		A custom map sharing site for the game Wargroove
+		<br>
+		<br>
+		Upload your maps today!
+	</div>
+	<div class="btn-bar">
+		<button onclick="window.location.href = '/upload';" id="upload-btn" class="ui labeled icon button main-btns massive">
+			<i class="cloud upload icon"></i>
+			Upload Your Map
+		</button>
+		<button onclick="window.location.href = '/searcher';" id="search-btn" class="ui labeled icon button main-btns massive">
+			<i class="search icon"></i>
+			Search Our Maps
+		</button>
+		<button onclick="window.location.href = 'https://www.patreon.com/gbfraiders';" id="donate-btn" class="ui labeled icon button main-btns massive">
+			<i class="patreon icon"></i>
+			Donate On Patreon
+		</button>
+	</div>
+	<div class="featured-box">
+		<h5 class="featured-title">Featured Maps</h5>
+		<div id="featured-content" class="featured-content">No Featured Maps Yet!<div>
+	</div>
+	<script src="utils/jquery-3.2.1.min.js"></script>
+	<script src="semantic/dist/semantic.min.js"></script>
+	<script src="index.js"></script>
+</body>
+
+</html>

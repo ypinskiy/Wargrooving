@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Wargrooving - Search</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="Description" content="A custom map sharing site for the game Wargroove">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="stylesheet" href="/semantic/dist/semantic.min.css">
+	<link rel="stylesheet" href="/search.css">
+</head>
+
+<body>
+	<div class="titlebar">
+		<a href="/">Wargrooving</a>
+		<a href="/">
+			<img src="/assets/map_bg.png">
+		</a>
+	</div>
+	<div class="msg-box">
+		<form id="search-form" class="ui form">
+			<div class="field">
+				<label>Search Terms</label>
+				<input type="text" id="terms" name="terms" placeholder="Search for text here...">
+			</div>
+			<div class="field">
+				<label>Filter By Tags</label>
+				<select id="tag-options" multiple class="ui fluid search multiple dropdown" multiple="" name="tags">
+					<option value="" disabled selected>Select your tags</option>
+				</select>
+			</div>
+			<div class="field">
+				<label>Filter By Date</label>
+				<div class="ui selection dropdown">
+					<input type="hidden" id="dateFilter" name="date" value="0">
+					<i class="dropdown icon"></i>
+					<div class="default text">Date Filter</div>
+					<div class="menu">
+						<div class="item" data-value="0">From All Time</div>
+						<div class="item" data-value="1">From Last Month</div>
+						<div class="item" data-value="2">From Last Week</div>
+					</div>
+				</div>
+			</div>
+			<div class="field">
+				<label>Sort By</label>
+				<div class="ui selection dropdown">
+					<input type="hidden" id="sort" name="sort" value="0">
+					<i class="dropdown icon"></i>
+					<div class="default text">Sort By</div>
+					<div class="menu">
+						<div class="item" data-value="0">Relevance</div>
+						<div class="item" data-value="1">Date - Oldest First</div>
+						<div class="item" data-value="2">Date - Newest First</div>
+						<div class="item" data-value="3">Stars - Most First</div>
+						<div class="item" data-value="4">Date - Least First</div>
+					</div>
+				</div>
+			</div>
+		</form>
+		<button type="button" id="submit-btn" class="green ui button">Search</button>
+		<button type="button" id="reset-btn" class="red ui button">Reset</button>
+	</div>
+	<script src="/utils/jquery-3.2.1.min.js"></script>
+	<script src="/semantic/dist/semantic.min.js"></script>
+	<script src="/search.js"></script>
+</body>
+
+</html>
