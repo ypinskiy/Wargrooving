@@ -154,6 +154,9 @@ app.post( '/uploadmap', function ( req, res ) {
 			mapJSON.stars = 0;
 			mapJSON.mimetype = req.mimetype;
 			mapJSON.created_at = new Date().getTime();
+			if ( typeof mapJSON.tags === "string" ) {
+				mapJSON.tags = [ mapJSON.tags ];
+			}
 			fs.writeFile( __dirname + '/static/maps/' + req.body.code + ".json",
 				JSON.stringify( mapJSON, null, '\t' ),
 				function ( err ) {
